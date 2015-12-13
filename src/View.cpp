@@ -112,32 +112,32 @@ void View::animate_particles()
         green .push_back(Particle(43,  6, 0, 0, 'u'));
 
     }
-    if (time >= 890 && time < 1100)
+    if (time >= 890 && time < 950)
     {
         for (it = orange.begin(); it != orange.end(); it++)
         {
-            it->vx -= 0.02*(40 - it->x);
-            it->vy -= 0.02*(-3 - it->y);
+            it->vx -= 0.002*(40 - it->x);
+            it->vy -= 0.004*(-3 - it->y);
         }
         for (it = red.begin(); it != red.end(); it++)
         {
-            it->vx -= 0.02*(40 - it->x);
-            it->vy -= 0.02*(-3 - it->y);
+            it->vx -= 0.002*(40 - it->x);
+            it->vy -= 0.004*(-3 - it->y);
         }
         for (it = green.begin(); it != green.end(); it++)
         {
-            it->vx -= 0.02*(40 - it->x);
-            it->vy -= 0.02*(-3 - it->y);
+            it->vx -= 0.002*(40 - it->x);
+            it->vy -= 0.004*(-3 - it->y);
         }
         for (it = purple.begin(); it != purple.end(); it++)
         {
-            it->vx -= 0.02*(40 - it->x);
-            it->vy -= 0.02*(-3 - it->y);
+            it->vx -= 0.002*(40 - it->x);
+            it->vy -= 0.004*(-3 - it->y);
         }
     }
 
 
-    if (time > 1100)
+    if (time > 950)
     {
         if (time % 10 == 0)
         {
