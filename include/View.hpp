@@ -29,13 +29,12 @@ public:
     void move_left();
     void move_right();
 
-    int get_position();
-
     void draw();
-private:
+
     int x;
-    Particles particles;
     float size;
+
+    Particles particles;
 };
 
 class View {
@@ -57,12 +56,19 @@ private:
     View();
 
     void animate_particles();
-    void draw_particles();
 
+    void draw_particles(char* color, Particles &particles);
     void clean_particles(Particles &particles);
+    void reattach_particles(Particles &particles);
+    void move_particles(Particles &particles);
+    void update_particle_list(Particles &particles);
 
     Player player;
     Particles purple;
+    Particles yellow;
+    Particles red;
+    Particles orange;
+    Particles green;
     int time;
     bool run;
 };
