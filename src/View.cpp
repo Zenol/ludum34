@@ -35,7 +35,7 @@ void View::clean_particles(Particles &particles)
          it != particles.end(); it++)
         if (it-> x < 0 || it->y < 0 ||
             it->x > 79 || it->y > 29)
-            it = particles->erase(it);
+            it = particles.erase(it);
 }
 
 bool View::refresh()
