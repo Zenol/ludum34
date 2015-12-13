@@ -1,15 +1,13 @@
 /*
-** mlcap.h for mlcap in /home/cochoy_j/rendu/rush/grimly/part3/lib/mlcap
-** 
+** mlcap.h for mlcap
+**
 ** Made by jeremy cochoy
-** Login   <cochoy_j@epitech.net>
-** 
-** Started on  Sat Apr 25 09:30:29 2009 jeremy cochoy
-** Last update Sun May 17 11:06:10 2009 jeremy cochoy
 */
 
 #ifndef MLC_H_
 # define MLC_H_
+
+extern "C" {
 
 # define	KEY_UNKNOW	0
 # define	KEY_UP		1
@@ -149,7 +147,7 @@ void	mlc_putchar(char c);
 /*
 ** Put a string (in buffer) at current pos
 */
-void	mlc_putstr(char *str);
+void	mlc_putstr(const char *str);
 
 /*
 ** Get char (from buffer) at current pos
@@ -165,11 +163,6 @@ void	mlc_putcolor(char *color);
 ** Get color from current pos
 */
 char	*mlc_getcolor(void);
-
-/*
-** Write a string (without buffer)
-*/
-void	mlc_putstr(char *str);
 
 /*
 ** Loop until your callback return 1
@@ -189,7 +182,7 @@ int	mlc_height(void);
 /*
 ** Return key code
 */
-int	mlc_keycode(char *str);
+int	mlc_keycode(const char *str);
 
 /*
 ** Display screen
@@ -264,5 +257,7 @@ void	*mlc_picture_load(char *filename);
 ** Create a picture from screen
 */
 void	*mlc_capture(void);
+
+} /* extern C */
 
 #endif /* !MLC_H_ */
